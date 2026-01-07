@@ -1,0 +1,69 @@
+{
+  "name": "@catlike14/use-object-url",
+  "version": "1.0.0",
+  "description": "A React hook for managing object URLs with automatic cleanup and reference counting",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.app.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx}\"",
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "use-object-url",
+    "blob",
+    "url",
+    "createObjectURL",
+    "revokeObjectURL"
+  ],
+  "author": "Mattia Alfonso",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Catlike14/use-object-url.git"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@testing-library/react": "^16.1.0",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.5",
+    "@vitejs/plugin-react": "^5.1.1",
+    "@vitest/coverage-v8": "^3.0.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "globals": "^16.5.0",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.4.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^7.2.4",
+    "vitest": "^3.0.0"
+  }
+}
